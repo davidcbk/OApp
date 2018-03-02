@@ -1,0 +1,49 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.DatosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/vwTecnico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tecnico asignado"
+        android:textColor="#0033FF"
+        android:textSize="20dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"/>
+
+
+    <EditText
+        android:id="@+id/txtTecnico"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="17dp"
+        android:inputType="text"
+        android:ems="10"
+        android:text=""
+        android:textColor="#0033FF"
+        android:hint="David-Tiburcio"
+        android:layout_below="@+id/vwTecnico"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:id="@+id/btnTecnico"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Finalizar"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/txtTecnico"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.DatosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/vwFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fecha incidencia"
+        android:textColor="#0033FF"
+        android:textSize="20dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"/>
+
+
+    <EditText
+        android:id="@+id/txtFecha"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="17dp"
+        android:inputType="date"
+        android:ems="10"
+        android:text=""
+        android:hint="dd/mm/aaaa"
+        android:textColor="#0033FF"
+        android:layout_below="@+id/vwFecha"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/vwUrgencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Urgencia incidencia"
+        android:textColor="#0033FF"
+        android:textSize="20dip"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtFecha"/>
+
+
+    <EditText
+        android:id="@+id/txtUrgencia"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="Alta-media-baja"
+        android:inputType="text"
+        android:ems="10"
+        android:text=""
+        android:textColor="#0033FF"
+        android:layout_below="@+id/vwUrgencia"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:id="@+id/btnDatos"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Siguiente"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/txtUrgencia"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

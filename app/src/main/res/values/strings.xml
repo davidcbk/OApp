@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">OUp!</string>
+    <string name="sin_datos">Sin datos.</string>
+
+    <string name="progress_cargando_datos">Cargando datos&#8230;</string>
+
+    <string name="parte_fecha">Fecha</string>
+    <string name="parte_cliente">Cliente</string>
+    <string name="parte_motivo">Motivo</string>
+    <string name="parte_resolucion">Resolucion</string>
+    <string name="campo_requerido">Campo requerido</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="home_item">Inicio</string>
+    <string name="log_out_item">Cerrar Sesión</string>
+    <string name="configuracion_item">Configuración</string>
+    <string name="title_activity_acercade">Acercade</string>
+    <string name="title_activity_deslizante">Deslizante</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="Campo_obligatorio">Campo obligatorio</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_deslizante1">OUp!</string>
+</resources>

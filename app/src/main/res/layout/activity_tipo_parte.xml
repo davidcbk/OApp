@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dip"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.TipoParteActivity">
+
+    <TextView
+        android:id="@+id/vwTexto"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar tipo de parte:"
+        android:layout_marginTop="20dip"
+        android:layout_marginBottom="20dip"
+        android:gravity="left"
+        android:textSize="20dip"
+        android:textColor="#0033FF" />
+
+    <RadioGroup
+        android:id="@+id/rdgTipo"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@+id/rdbEntrega"
+        android:layout_column="0"
+        android:layout_span="6">
+
+        <RadioButton
+            android:id="@+id/rdbEntrega"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Entrega material"
+            android:drawableLeft="@mipmap/ic_entrega"/>
+
+        <RadioButton
+            android:id="@+id/rdbTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Asistencia técnica"
+            android:layout_marginTop="15dip"
+            android:layout_marginBottom="40dip"
+            android:drawableLeft="@mipmap/ic_trabajo"/>
+
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/btnRellenar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rellenar parte"
+        android:layout_gravity="center_horizontal" />
+
+</LinearLayout>
+

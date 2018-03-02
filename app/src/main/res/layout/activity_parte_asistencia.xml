@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="20dip"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.ParteAsistenciaActivity">
+
+    <TextView
+        android:id="@+id/vwTipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PARTE ASISTENCIA TECNICA"
+        android:textSize="20dip"
+        android:textColor="#0033FF"/>
+
+    <EditText
+        android:id="@+id/txtHora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="time"
+        android:hint="Hora"/>
+
+    <EditText
+        android:id="@+id/txtFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        android:hint="Fecha"/>
+
+    <EditText
+        android:id="@+id/txtCliente"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Introducir nombre del cliente"
+        android:inputType="text"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="15dip"/>
+
+    <EditText
+        android:id="@+id/txtIncidencia"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:hint="Introducir incidencias resueltas"
+        android:inputType="text"
+        android:layout_marginTop="15dip"
+        android:layout_marginBottom="15dip"/>
+
+    <CheckBox
+        android:id="@+id/cbMantenimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mantenimiento" />
+
+    <CheckBox
+        android:id="@+id/cbFacturable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facturable" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar" />
+
+</LinearLayout>
+

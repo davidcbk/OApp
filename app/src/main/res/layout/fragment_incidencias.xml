@@ -1,0 +1,74 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.DatosFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/vwAsunto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Titulo incidencia"
+        android:textColor="#0033FF"
+        android:textSize="20dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"/>
+
+
+    <EditText
+        android:id="@+id/txtAsunto"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="17dp"
+        android:inputType="text"
+        android:ems="10"
+        android:text=""
+        android:textColor="#0033FF"
+        android:layout_below="@+id/vwAsunto"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/vwObservacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observacion incidencia"
+        android:textColor="#0033FF"
+        android:textSize="20dip"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/txtAsunto"/>
+
+
+    <EditText
+        android:id="@+id/txtObservacion"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint=""
+        android:inputType="text"
+        android:ems="10"
+        android:text=""
+        android:textColor="#0033FF"
+        android:layout_below="@+id/vwObservacion"
+        android:layout_marginTop="17dp"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <Button
+        android:id="@+id/btnIncidencia"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Siguiente"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/txtObservacion"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+
+</RelativeLayout>

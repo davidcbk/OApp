@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.Ayuda">
+
+
+    <TextView
+        android:id="@+id/txtSoporte"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Información soporte "
+        android:textColor="#0033FF"
+        android:textSize="30dp"
+        android:textStyle="bold"
+
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="E-mail: soporte@cubikosolutions.com"
+        android:textColor="#0033FF"
+        android:textSize="25dp"
+
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/txtSoporte"
+        android:layout_alignStart="@+id/txtSoporte" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tlf: 646438962"
+        android:textColor="#0033FF"
+        android:textSize="25dp"
+        android:id="@+id/txtTlf"
+        android:layout_below="@+id/txtEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_movil"
+        android:drawablePadding="8dp"
+        android:id="@+id/btnAyuda"
+        android:textColor="@android:color/black"
+        android:text="Marcar"
+        android:layout_below="@+id/txtTlf"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_logocbk"
+        android:layout_marginTop="33dp"
+        android:layout_below="@+id/btnAyuda"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/txtWeb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:text="www.cubikosolutions.com"
+        android:textColor="#0033FF"
+        android:textSize="25dp"
+        android:layout_below="@+id/imgLogo"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
