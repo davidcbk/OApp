@@ -6,7 +6,7 @@ package com.cubikosolutions.dampgl.ejemplopcpartes.constantes;
 
 public class G {
 
-    public static final String RUTA_SERVIDOR = "http://192.168.1.90:8080/PartesOnline/webresources";
+    public static final String RUTA_SERVIDOR = "http://192.168.1.91:8080/PartesOnline/webresources";
     public static final int SYNC_INTERVAL = 60; // no se puede poner menos de 60 segundos
     public static final boolean VERSION_ADMINISTRADOR = true; //true es admin y false solo consultas
     public static final int SIN_VALOR_INT = -1;
