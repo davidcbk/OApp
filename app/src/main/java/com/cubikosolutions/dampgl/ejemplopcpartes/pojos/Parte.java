@@ -14,16 +14,16 @@ public class Parte {
     private String cliente;
     private String motivo;
     private String resolucion;
-    private Bitmap imagen;
+   // private Bitmap imagen;
 
 
     public Parte (){
-        this.ID = G.SIN_VALOR_INT;
-        this.fecha = G.SIN_VALOR_STRING;
-        this.cliente = G.SIN_VALOR_STRING;
-        this.motivo = G.SIN_VALOR_STRING;
-        this.resolucion = G.SIN_VALOR_STRING;
-        this.setImagen(null);
+       // this.ID = G.SIN_VALOR_INT;
+        //this.fecha = G.SIN_VALOR_STRING;
+        //this.cliente = G.SIN_VALOR_STRING;
+        //this.motivo = G.SIN_VALOR_STRING;
+        //this.resolucion = G.SIN_VALOR_STRING;
+        //this.setImagen(null);
     }
 
     public Parte(int ID, String fecha, String cliente, String motivo, String resolucion) {
@@ -32,18 +32,18 @@ public class Parte {
         this.cliente = cliente;
         this.motivo = motivo;
         this.resolucion = resolucion;
-        this.imagen = imagen;
+        //this.imagen = imagen;
     }
 
 
-    public Bitmap getImagen() {
+   // public Bitmap getImagen() {
 
-        return imagen;
-    }
+    //    return imagen;
+    //}
 
-    public void setImagen(Bitmap imagen) {
-        this.imagen = imagen;
-    }
+    //public void setImagen(Bitmap imagen) {
+     //   this.imagen = imagen;
+    //}
 
     public int getID() { return ID;}
 

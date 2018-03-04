@@ -28,7 +28,7 @@ public class BitacoraProveedor {
 
 
         Uri uriResultado = resolver.insert(uri, values);
-       String BitacoraId = uriResultado.getLastPathSegment();
+      // String BitacoraId = uriResultado.getLastPathSegment();
 
     }
 

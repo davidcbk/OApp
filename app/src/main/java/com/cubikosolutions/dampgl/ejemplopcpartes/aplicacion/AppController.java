@@ -34,7 +34,7 @@ public class AppController extends Application {
     // An account type, in the form of a domain name
     public static final String ACCOUNT_TYPE = "com.cubikosolutions.dampgl.ejemplopcpartes";
     // The account name
-    public static final String ACCOUNT = "Incidencias";
+    public static final String ACCOUNT = "OUp";
     // Sync interval constants
     public static final long SYNC_INTERVAL = G.SYNC_INTERVAL; // Cada minuto
 

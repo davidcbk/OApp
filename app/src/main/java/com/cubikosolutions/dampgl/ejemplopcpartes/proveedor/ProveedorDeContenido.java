@@ -30,7 +30,7 @@ public class ProveedorDeContenido extends ContentProvider {
     private SQLiteDatabase sqlDB;
     public DatabaseHelper dbHelper;
     private static final String DATABASE_NAME = "PartesOnline.db";
-    private static final int DATABASE_VERSION = 302;
+    private static final int DATABASE_VERSION = 309;
 
     private static final String PARTE_TABLE_NAME = "Parte"; // nombre de la tabla
     private static final String BITACORA_TABLE_NAME = "Bitacora"; // nombre de la tabla
@@ -120,8 +120,13 @@ public class ProveedorDeContenido extends ContentProvider {
             //if (!db.isReadOnly()){
             //Habilitamos la integridad referencial
 
-            db.execSQL("PRAGMA foreign_keys=ON;");
+           // db.execSQL("PRAGMA foreign_keys=ON;");
            // }
+        }
+        // Añadimos esto para resolver el problema de la integridad referencial ya que a partir de la API 16 el método ha cambiado
+        @Override
+        public void onConfigure(SQLiteDatabase db){
+            db.setForeignKeyConstraintsEnabled(true);
         }
 
         @Override
