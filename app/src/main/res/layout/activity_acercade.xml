@@ -5,19 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.Acercade">
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.Acercade"
+    tools:ignore="ContentDescription">
 
     <TextView
         android:id="@+id/textViewApp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
-        android:text="Desarrollada por"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="30dp"
-        android:textStyle="bold"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:text="@string/desarrollada_por"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/ivDesarrollador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:src="@drawable/desarrollador" />
+
+    <TextView
+        android:id="@+id/textViewApp1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivDesarrollador"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:text="@string/producto"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp"
+        android:textStyle="bold" />
 
 
     <ImageView
@@ -26,33 +49,21 @@
         android:layout_height="wrap_content"
         android:src="@mipmap/ic_logocbk"
         android:layout_marginTop="31dp"
-        android:layout_below="@+id/textViewApp"
+        android:layout_below="@+id/textViewApp1"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textViewVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Versión: 2.0"
+        android:text="@string/version"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="15dp"
+        android:textSize="15sp"
         android:textStyle="bold"
         android:layout_below="@+id/ivLogo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp" />
 
-    <TextView
-        android:id="@+id/textViewCompilacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Compilacion: DAM"
-        android:textColor="@color/colorPrimaryDark"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:layout_below="@+id/textViewVersion"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="14dp"
-        />
 
 
 

@@ -5,6 +5,6 @@
         android:id="@+id/action_ayuda"
         android:orderInCategory="100"
         android:title="Ayuda"
-        android:icon="@drawable/ic_info_outline_black_24dp"
+        android:icon="@drawable/info"
         app:showAsAction="ifRoom" />
 </menu>

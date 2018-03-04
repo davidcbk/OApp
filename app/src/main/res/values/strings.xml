@@ -9,6 +9,13 @@
     <string name="parte_motivo">Motivo</string>
     <string name="parte_resolucion">Resolucion</string>
     <string name="campo_requerido">Campo requerido</string>
+    <string name="desarrollada_por">Desarrollada por</string>
+    <string name="version">Versión: 2.0</string>
+    <string name="producto">un producto de</string>
+    <string name="informacion">Info. soporte:</string>
+    <string name="email">soporte@cubikosolutions.com</string>
+    <string name="tlf">Tlf.: 646438962</string>
+    <string name="web">www.cubikosolutions.com</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

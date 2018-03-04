@@ -54,7 +54,7 @@
         </activity>
         <activity android:name=".RegistroActivity" />
         <activity android:name=".ParteAsistenciaActivity" />
-        <activity android:name=".TipoParteActivity" />
+        <activity android:name=".TipoParteActivity"/>
         <activity android:name=".ParteEntregaActivity" />
         <activity
             android:name=".parte.ParteActivity"
