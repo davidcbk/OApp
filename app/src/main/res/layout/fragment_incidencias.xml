@@ -11,8 +11,8 @@
         android:id="@+id/vwAsunto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Titulo incidencia"
-        android:textColor="#0033FF"
+        android:text="Material entregado"
+        android:textColor="@color/colorVerde"
         android:textSize="20dip"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -35,8 +35,8 @@
         android:id="@+id/vwObservacion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Observacion incidencia"
-        android:textColor="#0033FF"
+        android:text="Observaciones"
+        android:textColor="@color/colorVerde"
         android:textSize="20dip"
         android:layout_marginTop="17dp"
         android:layout_centerHorizontal="true"
@@ -65,7 +65,12 @@
         android:text="Siguiente"
         android:layout_marginTop="17dp"
         android:layout_below="@+id/txtObservacion"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:background="@color/colorVerde"
+        android:textColor="@color/colorBlanco"/>
 
 
 

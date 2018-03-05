@@ -26,7 +26,7 @@ public class Sincronizacion {
     public Sincronizacion(Context contexto){
         this.resolvedor = contexto.getContentResolver();
         this.contexto = contexto;
-        //recibirActualizacionesDelServidor(); //La primera vez se cargan los datos siempre
+        recibirActualizacionesDelServidor(); //La primera vez se cargan los datos siempre
     }
 
     public synchronized static boolean isEsperandoRespuestaDeServidor() {
@@ -46,6 +46,7 @@ public class Sincronizacion {
 
         if(G.VERSION_ADMINISTRADOR){
             enviarActualizacionesAlServidor();
+            recibirActualizacionesDelServidor();
         } else {
             recibirActualizacionesDelServidor();
         }

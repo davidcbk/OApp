@@ -12,8 +12,8 @@
         android:id="@+id/vwTecnico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tecnico asignado"
-        android:textColor="#0033FF"
+        android:text="Técnico asignado"
+        android:textColor="@color/colorVerde"
         android:textSize="20dip"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -29,7 +29,7 @@
         android:ems="10"
         android:text=""
         android:textColor="#0033FF"
-        android:hint="David-Tiburcio"
+        android:hint="Nombre técnico"
         android:layout_below="@+id/vwTecnico"
         android:layout_centerHorizontal="true" />
 
@@ -39,10 +39,17 @@
         android:id="@+id/btnTecnico"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_below="@+id/txtTecnico"
         android:text="Finalizar"
         android:layout_marginTop="17dp"
-        android:layout_below="@+id/txtTecnico"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:background="@color/colorVerde"
+        android:textColor="@color/colorBlanco"
         android:layout_centerHorizontal="true" />
+
+
 
 
 
