@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent selcrear = new Intent (getApplicationContext(), Deslizante1.class);
+             //   Intent selcrear = new Intent (getApplicationContext(), Deslizante1.class); VA A SLICE
+                Intent selcrear = new Intent (getApplicationContext(), ParteEntregaActivity.class);
                 startActivity(selcrear);
             }
         });
@@ -72,7 +73,7 @@ public class MainActivity extends AppCompatActivity
         btnRellenar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent selrellenar = new Intent (getApplicationContext(), TipoParteActivity.class);
+                Intent selrellenar = new Intent (getApplicationContext(), ParteActivity.class);
                 startActivity(selrellenar);
             }
         });

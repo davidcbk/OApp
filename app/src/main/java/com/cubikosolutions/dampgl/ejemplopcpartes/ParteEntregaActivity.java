@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class ParteEntregaActivity extends Activity implements OnClickListener {
 
-    private Button btnGuardar;
+    private Button btnCrearPDFEntrega;
     private EditText txtHora, txtFecha,txtCliente,txtMaterial;
     private CheckBox cbPrestamo,cbFacturable;
 
@@ -25,11 +25,11 @@ public class ParteEntregaActivity extends Activity implements OnClickListener {
         txtFecha = (EditText) findViewById(R.id.txtFecha);
         txtCliente = (EditText) findViewById(R.id.txtCliente);
         txtMaterial = (EditText) findViewById(R.id.txtMaterial);
-        btnGuardar = (Button) findViewById(R.id.btnGuardar);
+        btnCrearPDFEntrega = (Button) findViewById(R.id.btnCrearPDFEntrega);
         cbFacturable = (CheckBox) findViewById(R.id.cbFacturable);
         cbPrestamo = (CheckBox) findViewById(R.id.cbPrestamo);
 
-        btnGuardar.setOnClickListener(this);
+        btnCrearPDFEntrega.setOnClickListener(this);
     }
 
     @Override

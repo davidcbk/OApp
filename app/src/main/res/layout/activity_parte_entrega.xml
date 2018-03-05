@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="PARTE DE ENTREGA DE MATERIAL"
         android:textSize="20dip"
-        android:textColor="#0033FF"/>
+        android:textColor="@color/colorNegro"/>
 
     <EditText
         android:id="@+id/txtHora"
@@ -63,10 +63,15 @@
         android:text="Facturable" />
 
     <Button
-        android:id="@+id/btnGuardar"
+        android:id="@+id/btnCrearPDFEntrega"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar" />
+        android:text="Crear PDF"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:background="@color/colorVerde"
+        android:textColor="@color/colorBlanco"/>
 
 
 </LinearLayout>

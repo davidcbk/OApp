@@ -21,15 +21,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:text="Crear incidencia"
+            android:text="Crear parte entrega material"
             tools:layout_editor_absoluteX="148dp"
-            tools:layout_editor_absoluteY="291dp" />
+            tools:layout_editor_absoluteY="291dp"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:background="@color/colorVerde"
+            android:textColor="@color/colorBlanco"/>
 
         <Button
             android:id="@+id/btnRellenar"
-            android:layout_width="150dp"
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:text="Rellenar parte"
+            android:layout_gravity="center_horizontal"
+            android:background="@color/colorgris2"
+            android:paddingLeft="20dip"
+            android:paddingRight="20dip"
+            android:text="Crear incidencia / parte"
+            android:textColor="@color/colorBlanco"
             tools:layout_editor_absoluteX="153dp"
             tools:layout_editor_absoluteY="356dp" />
 

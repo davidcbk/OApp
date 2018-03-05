@@ -120,7 +120,13 @@
                 android:layout_height="75dp"
                 android:src="@drawable/ic_adjuntar"
                 android:id="@+id/image_button_galeria"/>
-        </LinearLayout>rLayout
+
+            <ImageButton
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/pdf"
+                android:id="@+id/image_button_pdf"/>
+        </LinearLayout>
 
 
     </LinearLayout>
