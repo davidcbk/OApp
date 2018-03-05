@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.Ayuda">
+    tools:context="com.cubikosolutions.dampgl.ejemplopcpartes.Ayuda"
+    android:background="@color/colorNegro">
 
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/informacion"
-        android:textColor="@color/colorNegro"
+        android:textColor="@color/colorBlanco"
         android:textSize="30dp"
         android:textStyle="bold"
 
@@ -44,16 +45,17 @@
         android:layout_marginBottom="24dp" />
 
     <Button
+        android:id="@+id/btnAyuda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:drawableLeft="@drawable/ic_movil"
-        android:drawablePadding="8dp"
-        android:id="@+id/btnAyuda"
-        android:textColor="@android:color/black"
-        android:text="LLAMAR"
         android:layout_below="@+id/txtTlf"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:drawableLeft="@drawable/ic_movil"
+        android:drawablePadding="10dp"
+        android:text="LLAMAR"
+        android:background="@color/colorVerde"
+        android:textColor="@color/colorBlanco" />
 
     <ImageView
         android:id="@+id/imgLogo"

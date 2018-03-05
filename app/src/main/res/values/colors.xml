@@ -6,5 +6,8 @@
     <color name="colorNegro">#242B32</color>
     <color name="colorVerde">#14B1B5</color>
     <color name="colorBlanco">#FFFFFF</color>
+    <color name="colorgris1">#6b727c</color>
+    <color name="colorgris2">#34404b</color>
+    <color name="colorgris3">#b6b8bd</color>
     <color name="window_background">#FFF5F5F5</color>
 </resources>
