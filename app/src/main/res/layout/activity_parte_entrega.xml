@@ -17,20 +17,12 @@
         android:textColor="@color/colorNegro"/>
 
     <EditText
-        android:id="@+id/txtHora"
+        android:id="@+id/txtPresupuesto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="time"
-        android:hint="Hora"/>
-
-    <EditText
-        android:id="@+id/txtFecha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="date"
-        android:hint="Fecha"/>
+        android:inputType="text"
+        android:hint="Numero presupuesto"/>
 
     <EditText
         android:id="@+id/txtCliente"

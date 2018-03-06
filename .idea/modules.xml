@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OUp1.iml" filepath="$PROJECT_DIR$/OUp1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://C:\android\OUp1\app\app.iml" filepath="C:\android\OUp1\app\app.iml" />
       <module fileurl="file://C:\android\OUp1\dampgl4.iml" filepath="C:\android\OUp1\dampgl4.iml" />
     </modules>
   </component>
