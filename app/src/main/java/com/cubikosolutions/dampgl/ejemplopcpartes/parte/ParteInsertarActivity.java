@@ -81,7 +81,6 @@ public class ParteInsertarActivity extends AppCompatActivity {
         imageViewParte = (ImageView) findViewById(R.id.image_view_parte);
 
 
-
         ImageButton imageButtonCamara = (ImageButton) findViewById(R.id.image_button_camara);
         imageButtonCamara.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,17 +97,18 @@ public class ParteInsertarActivity extends AppCompatActivity {
                 elegirDeGaleria();
             }
         });
+   // }
 
-
-        ImageButton imageButtonPDF = (ImageButton) findViewById(R.id.image_button_pdf);
+    ImageButton imageButtonPDF = (ImageButton) findViewById(R.id.image_button_pdf);
         imageButtonPDF.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                validar();
-            }
-        });
+        @Override
+        public void onClick(View view) {
+            validar();
+        }
+    });
 
-    }
+}
+
 
     //valida si tiene todos los campos rellenos
     private void validar(){
@@ -183,7 +183,6 @@ public class ParteInsertarActivity extends AppCompatActivity {
         }
 
     }
-
 
     void elegirDeGaleria (){
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);

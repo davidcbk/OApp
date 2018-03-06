@@ -84,6 +84,7 @@ public class ParteModificarActivity extends AppCompatActivity {
 
         imageViewParte = (ImageView) findViewById(R.id.image_view_parte);
 
+
         try {
             Utilidades.loadImageFromStorage(this, "img_" + parteId + ".jpg",imageViewParte );
             foto = ((BitmapDrawable)imageViewParte.getDrawable()).getBitmap();
@@ -109,17 +110,16 @@ public class ParteModificarActivity extends AppCompatActivity {
             }
         });
 
-    }
-
-
-    //IMPLEMENTACION DEL PDF
-    /*   ImageButton imageButtonPDF = (ImageButton) findViewById(R.id.image_button_pdf);
+   // }
+        ImageButton imageButtonPDF = (ImageButton) findViewById(R.id.image_button_pdf);
         imageButtonPDF.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            validar();
-        }
-    }); */
+            @Override
+            public void onClick(View view) {
+                validar();
+            }
+        });
+
+    }
 
 
     //valida si tiene todos los campos rellenos
@@ -137,8 +137,8 @@ public class ParteModificarActivity extends AppCompatActivity {
         }
     }
 
-    //genera el pdf con los datos
-    void generarPDF(){
+//genera el pdf con los datos
+     void generarPDF(){
         String tiempo = ("Tiempo empleado: " + editTextParteFecha.getText().toString());
         String cliente =("Cliente: " + editTextParteCliente.getText().toString());
         String motivo = ("Motivo incidencia: " + editTextParteMotivo .getText().toString());
@@ -195,6 +195,7 @@ public class ParteModificarActivity extends AppCompatActivity {
         }
 
     }
+
 
     void elegirDeGaleria (){
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);

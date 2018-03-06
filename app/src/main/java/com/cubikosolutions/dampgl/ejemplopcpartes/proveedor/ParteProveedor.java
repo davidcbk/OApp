@@ -142,7 +142,7 @@ public class ParteProveedor {
             partes.add(parte);
 
         }
-
+        cursor.close();
         return partes;
     }
 }

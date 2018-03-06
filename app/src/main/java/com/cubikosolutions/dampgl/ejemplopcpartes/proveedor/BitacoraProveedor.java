@@ -99,7 +99,7 @@ public class BitacoraProveedor {
             bitacoras.add(bitacora);
 
         }
-
+        cursor.close();
         return bitacoras;
     }
 }
