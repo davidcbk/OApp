@@ -36,6 +36,7 @@ import com.lowagie.text.Paragraph;
 import com.lowagie.text.Phrase;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
+import com.cubikosolutions.dampgl.ejemplopcpartes.constantes.Utilidades;
 
 import harmony.java.awt.Color;
 
@@ -83,14 +84,14 @@ public class ParteEntregaActivity extends Activity implements OnClickListener {
 
         String seleccionado = null;
         if (cbFacturable.isChecked()) {
-            seleccionado = "facturable";
+            seleccionado = "Facturable";
         }else {
             if (cbPrestamo.isChecked()){
-                seleccionado = "prestamo";
+                seleccionado = "En préstamo";
             }
         }
         String titulo = "PARTE DE ENTREGA";
-        String textocompleto = "Fecha: " +obtenerfechacompleta() + "\n" + cliente + "\n" + material + "\n" + "El material es: " +seleccionado;
+        String textocompleto = "Fecha: " +Utilidades.obtenerfechacompleta() + "\n" + cliente + "\n" + material + "\n" + "El material es: " +seleccionado;
 
         // Creamos el documento.
         Document documento = new Document();
@@ -136,34 +137,12 @@ public class ParteEntregaActivity extends Activity implements OnClickListener {
             // Cerramos el documento.
             documento.close();
             Toast.makeText(getApplicationContext(), "Parte creado correctamente", Toast.LENGTH_SHORT).show();
-            mostrarPdf(rutacompleta, this);
+            Utilidades.mostrarPdf(rutacompleta, this);
         }
     }
 
 
-    public static  String obtenerfechacompleta (){
 
-        String obtenerfechacompleta = new SimpleDateFormat("dd-MM-yyyy  HH:mm:ss").format(new Date());
-        return obtenerfechacompleta;
-    }
-
-    public void mostrarPdf(String archivo, Context contexto) {
-        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
-        StrictMode.setVmPolicy(builder.build());
-
-        File file = new File(archivo);
-        Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(file), "application/pdf");
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        try {
-            contexto.startActivity(intent);
-        } catch (ActivityNotFoundException e) {
-            Toast.makeText(getApplicationContext(), "No hay programa para mostrar PDF", Toast.LENGTH_SHORT).show();
-        }
-
-
-    }
 
 }
 

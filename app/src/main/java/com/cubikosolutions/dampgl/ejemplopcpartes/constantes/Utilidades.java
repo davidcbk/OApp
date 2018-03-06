@@ -2,14 +2,19 @@ package com.cubikosolutions.dampgl.ejemplopcpartes.constantes;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -36,18 +41,6 @@ public class Utilidades {
         fos.close();
     }
 
-    public static File crearCarpetaApp() {
-        File carpetaAPP;
-        carpetaAPP = new File(Environment.getExternalStorageDirectory()
-                + File.separator
-                + "OUP");
-        if (!carpetaAPP.exists()) {
-            carpetaAPP.mkdir();
-            return carpetaAPP;
-        }
-
-        return null;
-    }
 
     public static  void permisoEscritura( Activity activity){
         int permissionCheck = ContextCompat.checkSelfPermission
@@ -71,5 +64,28 @@ public class Utilidades {
     }
 
 
+    public static  String obtenerfechacompleta (){
+
+        String obtenerfechacompleta = new SimpleDateFormat("dd-MM-yyyy  HH:mm:ss").format(new Date());
+        return obtenerfechacompleta;
+    }
+
+    public static void mostrarPdf(String archivo, Context contexto) {
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
+
+        File file = new File(archivo);
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(file), "application/pdf");
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        try {
+            contexto.startActivity(intent);
+        } catch (ActivityNotFoundException e) {
+            Toast.makeText(null, "No hay programa para mostrar PDF", Toast.LENGTH_SHORT).show();
+        }
+
+
+    }
 
 }
