@@ -4,7 +4,7 @@
 
     <string name="progress_cargando_datos">Cargando datos&#8230;</string>
 
-    <string name="parte_fecha">Fecha</string>
+    <string name="parte_tiempo">Tiempo empleado</string>
     <string name="parte_cliente">Cliente</string>
     <string name="parte_motivo">Motivo</string>
     <string name="parte_resolucion">Resolucion</string>

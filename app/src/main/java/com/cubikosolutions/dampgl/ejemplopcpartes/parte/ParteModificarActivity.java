@@ -5,16 +5,19 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.cubikosolutions.dampgl.ejemplopcpartes.R;
 import com.cubikosolutions.dampgl.ejemplopcpartes.constantes.G;
@@ -22,8 +25,20 @@ import com.cubikosolutions.dampgl.ejemplopcpartes.constantes.Utilidades;
 import com.cubikosolutions.dampgl.ejemplopcpartes.pojos.Parte;
 import com.cubikosolutions.dampgl.ejemplopcpartes.proveedor.Contrato;
 import com.cubikosolutions.dampgl.ejemplopcpartes.proveedor.ParteProveedor;
+import com.lowagie.text.Document;
+import com.lowagie.text.DocumentException;
+import com.lowagie.text.Font;
+import com.lowagie.text.FontFactory;
+import com.lowagie.text.HeaderFooter;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.Phrase;
+import com.lowagie.text.pdf.PdfWriter;
 
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import harmony.java.awt.Color;
 
 // import android.widget.Toolbar;
 
@@ -40,6 +55,10 @@ public class ParteModificarActivity extends AppCompatActivity {
 
     final int PETICION_SACAR_FOTO = 1;
     final int PETICION_GALERIA = 2;
+
+
+    private final static String NOMBRE_PDF_ENTREGA = "ParteAsistencia";
+    private final static String ETIQUETA_ERROR = "ERROR";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,6 +111,90 @@ public class ParteModificarActivity extends AppCompatActivity {
 
     }
 
+
+    //IMPLEMENTACION DEL PDF
+    /*   ImageButton imageButtonPDF = (ImageButton) findViewById(R.id.image_button_pdf);
+        imageButtonPDF.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            validar();
+        }
+    }); */
+
+
+    //valida si tiene todos los campos rellenos
+    private void validar(){
+
+        String tiempo = editTextParteFecha.getText().toString();
+        String cliente = editTextParteCliente.getText().toString();
+        String motivo = editTextParteMotivo.getText().toString();
+        String resolucion = editTextParteResolucion.getText().toString();
+
+        if ((TextUtils.isEmpty(tiempo)) | (TextUtils.isEmpty(cliente))| (TextUtils.isEmpty(motivo))| (TextUtils.isEmpty(resolucion))){
+            Toast.makeText(this,"Debe rellenar todos los campos para crear parte",Toast.LENGTH_LONG).show();
+        }else{
+            generarPDF();
+        }
+    }
+
+    //genera el pdf con los datos
+    void generarPDF(){
+        String tiempo = ("Tiempo empleado: " + editTextParteFecha.getText().toString());
+        String cliente =("Cliente: " + editTextParteCliente.getText().toString());
+        String motivo = ("Motivo incidencia: " + editTextParteMotivo .getText().toString());
+        String resolucion = ("Resolucion incidencia: " + editTextParteResolucion .getText().toString());
+
+        String titulo = "PARTE DE ASISTENCIA TÉCNICA";
+        String textocompleto = "Fecha parte: " +Utilidades.obtenerfechacompleta() + "\n" + cliente + "\n" + motivo + "\n" + resolucion + "\n"+ tiempo;
+
+        // Creamos el documento.
+        Document documento = new Document();
+        String nombrefichero = (NOMBRE_PDF_ENTREGA + cliente  + ".pdf");
+
+        String rutacompleta= Environment.getExternalStorageDirectory() + "/" + nombrefichero;
+
+        try {
+
+            PdfWriter.getInstance(documento, new FileOutputStream(rutacompleta));
+
+            // HEADER Y FOOTER
+            HeaderFooter cabecera = new HeaderFooter(new Phrase(
+                    "OUp! - Parte de asistencia técnica"), false);
+            HeaderFooter pie = new HeaderFooter(new Phrase(
+                    "OUp! (c) 2018"), false);
+            documento.setHeader(cabecera);
+            documento.setFooter(pie);
+            // Abrimos el documento.
+            documento.open();
+
+
+            // A�adimos un t�tulo
+            Font font = FontFactory.getFont(FontFactory.TIMES_ROMAN, 24,
+                    Font.BOLD, Color.black);
+            Font font1 = FontFactory.getFont(FontFactory.TIMES_ROMAN, 32,
+                    Font.BOLD, Color.black);
+            documento.add(new Paragraph(titulo, font1));
+            documento.add(new Paragraph(textocompleto, font));
+
+
+
+        } catch (DocumentException e) {
+
+            Log.e(ETIQUETA_ERROR, e.getMessage());
+
+        } catch (IOException e) {
+
+            Log.e(ETIQUETA_ERROR, e.getMessage());
+
+        } finally {
+
+            // Cerramos el documento.
+            documento.close();
+            Toast.makeText(getApplicationContext(), "Parte creado correctamente", Toast.LENGTH_SHORT).show();
+            Utilidades.mostrarPdf(rutacompleta, this);
+        }
+
+    }
 
     void elegirDeGaleria (){
         Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
