@@ -139,7 +139,7 @@ public class ParteModificarActivity extends AppCompatActivity {
 
 //genera el pdf con los datos
      void generarPDF(){
-        String tiempo = ("Tiempo empleado: " + editTextParteFecha.getText().toString());
+        String tiempo = ("Tiempo empleado: " + editTextParteFecha.getText().toString()  + " horas.");
         String cliente =("Cliente: " + editTextParteCliente.getText().toString());
         String motivo = ("Motivo incidencia: " + editTextParteMotivo .getText().toString());
         String resolucion = ("Resolucion incidencia: " + editTextParteResolucion .getText().toString());
