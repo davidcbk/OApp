@@ -27,6 +27,7 @@ public class ProveedorDeContenido extends ContentProvider {
     private static final int BITACORA_ONE_REG = 3;
     private static final int BITACORA_ALL_REGS = 4;
 
+
     private SQLiteDatabase sqlDB;
     public DatabaseHelper dbHelper;
     private static final String DATABASE_NAME = "PartesOnline.db";
@@ -34,6 +35,7 @@ public class ProveedorDeContenido extends ContentProvider {
 
     private static final String PARTE_TABLE_NAME = "Parte"; // nombre de la tabla
     private static final String BITACORA_TABLE_NAME = "Bitacora"; // nombre de la tabla
+
 
 
     // Indicates an invalid content URI
@@ -83,6 +85,7 @@ public class ProveedorDeContenido extends ContentProvider {
                 BITACORA_TABLE_NAME + "/#",
                 BITACORA_ONE_REG);
 
+
         // Specifies a custom MIME type for the picture URL table
 
         sMimeTypes.put(
@@ -102,6 +105,7 @@ public class ProveedorDeContenido extends ContentProvider {
                 BITACORA_ONE_REG,
                 "vnd.android.cursor.item/vnd."+
                         Contrato.AUTHORITY + "." + BITACORA_TABLE_NAME);
+
 
 
     }
@@ -149,6 +153,7 @@ public class ProveedorDeContenido extends ContentProvider {
                     + Contrato.Bitacora.ID_PARTE + " INTEGER , "
                     + Contrato.Bitacora.OPERACION + " INTEGER ); "
             );
+
 
            // inicializarDatos(db);
 
@@ -226,7 +231,7 @@ public class ProveedorDeContenido extends ContentProvider {
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         sqlDB = dbHelper.getWritableDatabase();
-        // insertRecord record in user table and get the row number of recently inserted record
+        // UsuarioProveedor record in user table and get the row number of recently inserted record
 
         String table = "";
         switch (sUriMatcher.match(uri)) {
@@ -305,7 +310,7 @@ public class ProveedorDeContenido extends ContentProvider {
     public int update(Uri uri, ContentValues values, String selection,
                       String[] selectionArgs) {
         sqlDB = dbHelper.getWritableDatabase();
-        // insertRecord record in user table and get the row number of recently inserted record
+        // UsuarioProveedor record in user table and get the row number of recently inserted record
 
         String table = "";
         switch (sUriMatcher.match(uri)) {

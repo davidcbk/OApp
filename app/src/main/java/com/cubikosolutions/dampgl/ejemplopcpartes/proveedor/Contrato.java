@@ -19,6 +19,8 @@ public class Contrato {
         public static final String RESOLUCION = "Resolucion";
     }
 
+
+
     public static final class Bitacora implements BaseColumns {
 
         public static final Uri CONTENT_URI = Uri
