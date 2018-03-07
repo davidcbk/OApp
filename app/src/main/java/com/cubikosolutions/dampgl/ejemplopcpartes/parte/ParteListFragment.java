@@ -175,12 +175,12 @@ public class ParteListFragment extends ListFragment
 		// currently filtering.
 
 
-		//MUESTRA LOS DATOS EN EL LISTADO
+		//MUESTRA ORDEN DE LOS DATOS EN EL LISTADO
 		String columns[] = new String[] { Contrato.Parte._ID,
 				Contrato.Parte.MOTIVO,
 				Contrato.Parte.CLIENTE,
-				Contrato.Parte.FECHA,
-				Contrato.Parte.RESOLUCION
+				Contrato.Parte.RESOLUCION,
+				Contrato.Parte.FECHA
 										};
 
 		Uri baseUri = Contrato.Parte.CONTENT_URI;
@@ -222,8 +222,8 @@ public class ParteListFragment extends ListFragment
 
 			String motivo = cursor.getString(cursor.getColumnIndex(Contrato.Parte.MOTIVO));
 			String cliente = cursor.getString(cursor.getColumnIndex(Contrato.Parte.CLIENTE));
-			String fecha = cursor.getString(cursor.getColumnIndex(Contrato.Parte.FECHA));
-			String resolucion = cursor.getString(cursor.getColumnIndex(Contrato.Parte.RESOLUCION));
+			String fecha = cursor.getString(cursor.getColumnIndex(Contrato.Parte.RESOLUCION));
+			String resolucion = cursor.getString(cursor.getColumnIndex(Contrato.Parte.FECHA));
 	
 
 

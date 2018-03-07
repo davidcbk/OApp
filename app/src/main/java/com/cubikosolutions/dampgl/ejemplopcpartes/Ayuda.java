@@ -17,6 +17,9 @@ public class Ayuda extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ayuda);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //flechita para ir al padre
+
         Button btnAyuda = (Button) findViewById(R.id.btnAyuda);
         btnAyuda.setOnClickListener(new View.OnClickListener() {
             @Override

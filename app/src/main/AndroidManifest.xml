@@ -22,11 +22,7 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".Acercade"
-            android:label="@string/title_activity_acercade"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".Deslizante1"
             android:label="@string/title_activity_deslizante1"
@@ -56,7 +52,31 @@
         <activity android:name=".RegistroActivity" />
         <activity android:name=".ParteAsistenciaActivity" />
         <activity android:name=".TipoParteActivity"/>
-        <activity android:name=".ParteEntregaActivity" />
+
+
+        <activity
+            android:name=".ParteEntregaActivity"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
+        <activity
+            android:name=".Acercade"
+            android:label="@string/title_activity_acercade"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
         <activity
             android:name=".parte.ParteActivity"
             android:parentActivityName=".MainActivity"
@@ -94,7 +114,19 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".parte.ParteActivity" />
         </activity>
-        <activity android:name=".Ayuda"></activity>
+
+        <activity
+            android:name=".Ayuda"
+            android:parentActivityName=".MainActivity">
+
+            <!-- Parent activity meta-data to support 4.0 and lower -->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+
+
+
 
 
         <service

@@ -13,6 +13,8 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -40,7 +42,7 @@ import com.cubikosolutions.dampgl.ejemplopcpartes.constantes.Utilidades;
 
 import harmony.java.awt.Color;
 
-public class ParteEntregaActivity extends Activity implements OnClickListener {
+public class ParteEntregaActivity extends AppCompatActivity implements OnClickListener {
 
 
     private Button btnCrearPDFEntrega;
@@ -55,6 +57,10 @@ public class ParteEntregaActivity extends Activity implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parte_entrega);
+
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //flechita para ir al padre
+
 
 
 
