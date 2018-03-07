@@ -16,6 +16,7 @@
     <string name="email">soporte@cubikosolutions.com</string>
     <string name="tlf">Tlf.: 646438962</string>
     <string name="web">www.cubikosolutions.com</string>
+    <string name="error_contrasena_test">Error contraseña</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
