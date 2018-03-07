@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                ConsultaContrasena("http://192.168.1.91:8082/oup/consulta.php?email=" + txtEmail.getText().toString());
+                ConsultaContrasena("http://192.168.1.91:8082/oup/consulta.php?DNI=" + txtEmail.getText().toString());
 
             }
         });

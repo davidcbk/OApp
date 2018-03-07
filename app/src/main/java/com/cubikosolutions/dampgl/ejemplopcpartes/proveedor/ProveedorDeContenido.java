@@ -31,7 +31,7 @@ public class ProveedorDeContenido extends ContentProvider {
     private SQLiteDatabase sqlDB;
     public DatabaseHelper dbHelper;
     private static final String DATABASE_NAME = "PartesOnline.db";
-    private static final int DATABASE_VERSION = 310;
+    private static final int DATABASE_VERSION = 311;
 
     private static final String PARTE_TABLE_NAME = "Parte"; // nombre de la tabla
     private static final String BITACORA_TABLE_NAME = "Bitacora"; // nombre de la tabla
