@@ -92,7 +92,8 @@
             android:name=".proveedor.ProveedorDeContenido"
             android:authorities="com.cubikosolutions.dampgl.ejemplopcpartes.proveedor.ProveedorDeContenido"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"
+            android:syncable="true"/>
 
         <activity
             android:name=".parte.ParteInsertarActivity"

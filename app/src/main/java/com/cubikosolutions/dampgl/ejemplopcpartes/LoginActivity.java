@@ -42,8 +42,9 @@ public class LoginActivity extends AppCompatActivity  {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 ConsultaContrasena("http://192.168.1.91:8082/oup/consulta.php?DNI=" + txtEmail.getText().toString());
+
+               // ConsultaContrasena("https://192.168.1.213:8081/oup/consulta.php?DNI=" + txtEmail.getText().toString());
 
             }
         });
